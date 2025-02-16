@@ -37,15 +37,14 @@ export default function Navbar() {
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link
-          href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
+        {/* Business Logo and Name */}
+        <Link href="/" className="flex items-center space-x-3">
           <Image src={logo} alt="MAITS Logo" />
           <span className="self-center lg:text-2xl font-semibold whitespace-nowrap dark:text-white">
             Morse Accounting and Income Tax
           </span>
         </Link>
+        {/* Mobile Menu Toggle */}
         <button
           onClick={toggleMenu}
           type="button"
@@ -56,11 +55,12 @@ export default function Navbar() {
           <span className="sr-only">Open main menu</span>
           <GiHamburgerMenu size={24} color="silver" />
         </button>
+        {/* Navbar Menu */}
         <div
           className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <Link
                 href="/"
@@ -78,6 +78,7 @@ export default function Navbar() {
                 About
               </Link>
             </li>
+            {/* Services Dropdown Toggle */}
             <li className="relative" ref={dropdownRef}>
               <button
                 onClick={toggleDropdown}
@@ -86,6 +87,7 @@ export default function Navbar() {
               >
                 Services <RxCaretDown size={24} className="ml-1" />
               </button>
+              {/* Services Dropdown */}
               <div
                 id="dropdownNavbar"
                 className={`${
