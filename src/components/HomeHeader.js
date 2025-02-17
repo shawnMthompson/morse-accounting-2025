@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import Banner from "../../public/accounting.jpg";
+import Banner from "../../public/banner.png";
+
+/**
+ *
+ * An image slider might be appropriate for the HomeHeader.
+ * Adding some variety and motion to an otherwise static page will make it more lively.
+ *
+ */
 
 export default function HomeHeader() {
   return (
@@ -8,10 +15,10 @@ export default function HomeHeader() {
       <Image
         src={Banner}
         alt="Banner Image"
-        className="absolute w-full h-96 sm:h-[500px] object-cover brightness-75"
+        className="absolute w-full h-96 sm:h-[650px] object-cover bg-black opacity-50"
       />
-      <div className="mr-10 min-h-[350px] sm:min-h-[500px] relative z-10 h-full w-full flex flex-col justify-center text-white p-6 text-center items-center">
-        <h1 className="text-2xl sm:text-4xl font-bold mb-6">
+      <div className="min-h-[600px] sm:min-h-[300px] relative z-10 h-full w-fit flex flex-col justify-center text-white sm:pl-12 sm:pt-60 p-5 text-center sm:text-left items-center sm:items-start">
+        <h1 className="text-xl sm:text-4xl font-bold mb-6">
           Get your taxes done right with Deanna!
         </h1>
         <Link href="/contact">
