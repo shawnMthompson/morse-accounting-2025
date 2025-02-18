@@ -103,7 +103,7 @@ export default function Navbar() {
                 >
                   <li>
                     <Link
-                      href="services/accounting"
+                      href="/services/accounting"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Accounting
@@ -111,7 +111,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="services/bookkeeping"
+                      href="/services/bookkeeping"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Bookkeeping
@@ -119,7 +119,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="services/electronic-filing"
+                      href="/services/electronic-filing"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Electronic Filing
@@ -127,7 +127,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="services/notary-public-financials"
+                      href="/services/notary-public-financials"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Notary Public
@@ -135,7 +135,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="services/tax-planning"
+                      href="/services/tax-planning"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Tax Planning
@@ -143,7 +143,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="services/tax-preparation"
+                      href="/services/tax-preparation"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Tax Preparation
