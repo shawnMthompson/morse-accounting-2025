@@ -11,8 +11,8 @@ export default function PageHeader({ previousPage, currentPage }) {
         <Image
           src={Banner}
           alt="Banner Image"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           className="bg-black opacity-50"
         />
         <div className="absolute inset-0 flex flex-col justify-center sm:items-start text-white text-left sm:text-left p-4 sm:p-12 sm:mt-0 mt-10">
