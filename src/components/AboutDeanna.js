@@ -3,8 +3,8 @@ import DeannaT from "../../public/DeannaT.webp";
 
 export default function AboutDeanna() {
   return (
-    <section className="flex flex-col md:flex-row p-8 md:p-12 justify-center space-y-8 md:space-y-0 md:space-x-12">
-      <div className="basis-full md:basis-1/2 flex justify-center items-center max-w-md mx-auto md:mx-0">
+    <section className="flex flex-col md:flex-row p-8 md:p-12 justify-center md:space-y-0 md:space-x-12">
+      <div className="basis-full md:basis-1/2 flex justify-center items-center max-w-md mx-auto md:mx-0 mb-8 md:mb-0">
         <Image
           src={DeannaT}
           alt="Image of Deanna"

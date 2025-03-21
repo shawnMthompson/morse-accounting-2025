@@ -3,9 +3,9 @@ import Sign from "../../public/MAITS-Sign.png";
 
 export default function AboutBusiness() {
   return (
-    <section className="flex flex-col md:flex-row p-8 md:p-12 justify-center space-y-8 md:space-y-0 md:space-x-12">
-      <div className="basis-full md:basis-1/2 flex flex-col justify-center space-y-6">
-        <div className="space-y-3 mb-10">
+    <section className="flex flex-col md:flex-row p-8 md:p-12 justify-center md:space-y-0 md:space-x-12">
+      <div className="basis-full md:basis-1/2 flex flex-col justify-center space-y-6 order-2 md:order-1 mt-8 md:mt-0">
+        <div className="space-y-3">
           <h2 className="text-5xl mb-4 text-center md:text-left text-white">
             Morse Accounting and Income Tax Service
           </h2>
@@ -25,11 +25,11 @@ export default function AboutBusiness() {
           </p>
         </div>
       </div>
-      <div className="basis-full md:basis-1/2 flex justify-center items-center max-w-md mx-auto md:mx-0">
+      <div className="basis-full md:basis-1/2 flex justify-center items-center max-w-md mx-auto md:mx-0 order-1 md:order-2">
         <Image
           src={Sign}
-          alt="Image of Deanna"
-          className="rounded-lg max-w-full h-auto min-h-[300px] min-w-[350px]"
+          alt="Morse Accounting and Income Tax Service Sign"
+          className="rounded-lg max-w-full h-auto"
         />
       </div>
     </section>
