@@ -14,7 +14,7 @@ export default function AccountingPage() {
           <h2 className="font-bold text-2xl mb-4">
             Specialized Small Business Accounting for Real Estate
           </h2>
-          <h3 className="text-lg mb-4">
+          <p className="text-lg mb-4">
             Pellentesque habitant morbi tristique senectus et netus et malesuada
             fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
             ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
@@ -27,11 +27,11 @@ export default function AccountingPage() {
             cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
             eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan
             porttitor, facilisis luctus, metus
-          </h3>
+          </p>
           <h2 className="font-bold text-2xl mb-4">
             Specialized Small Business Accounting for Real Estate
           </h2>
-          <h3 className="text-lg mb-4">
+          <p className="text-lg mb-4">
             Pellentesque habitant morbi tristique senectus et netus et malesuada
             fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
             ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
@@ -44,11 +44,11 @@ export default function AccountingPage() {
             cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
             eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan
             porttitor, facilisis luctus, metus
-          </h3>
+          </p>
           <h2 className="font-bold text-2xl mb-4">
             Specialized Small Business Accounting for Real Estate
           </h2>
-          <h3 className="text-lg mb-4">
+          <p className="text-lg mb-4">
             Pellentesque habitant morbi tristique senectus et netus et malesuada
             fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
             ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
@@ -61,7 +61,7 @@ export default function AccountingPage() {
             cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
             eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan
             porttitor, facilisis luctus, metus
-          </h3>
+          </p>
         </div>
         <div
           id="col-2"
