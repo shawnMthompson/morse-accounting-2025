@@ -38,7 +38,7 @@ export default function AccountingPage() {
             your goals and tailor our services accordingly. Whether you need
             ongoing bookkeeping, year-end reports, or help navigating financial
             challenges, we’re here to support your success every step of the
-            way.
+            way!
           </p>
         </div>
         <div

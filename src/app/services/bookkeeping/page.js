@@ -32,11 +32,11 @@ export default function BookkeepingPage() {
           </p>
           <p className="text-lg mb-4">
             Every business is unique, which is why our bookkeeping services are
-            tailored to fit your specific needs. Whether you&apos;re just starting
-            out or have years of records that need tidying up, we’ll work with
-            you to develop a system that makes sense and supports your goals.
-            With our reliable support, you’ll always have confidence in your
-            numbers—and more time to do what you do best.
+            tailored to fit your specific needs. Whether you&apos;re just
+            starting out or have years of records that need tidying up, we’ll
+            work with you to develop a system that makes sense and supports your
+            goals. With our reliable support, you’ll always have confidence in
+            your numbers—and more time to do what you do best!
           </p>
         </div>
         <div
