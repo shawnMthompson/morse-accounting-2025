@@ -2,7 +2,7 @@
 
 ## Notice
 
-The business owner passed away in May 2025, and as a result, the website is no longer hosted. This repository remains available to showcase both the development work of the website and its technical implementation.
+The business owner passed away in May 2025, and as a result, the website is no longer going to be hosted. This repository remains available to showcase both the development work of the website and its technical implementation.
 
 ## Installation
 
