@@ -1,4 +1,3 @@
-// Get in Touch (Leads to Contact Page)
 import Link from "next/link";
 
 export default function GetInTouch() {
@@ -7,7 +6,7 @@ export default function GetInTouch() {
       <h5 className="text-2xl text-center font-bold">GET IN TOUCH</h5>
       <p className="text-center">
         We are eager to discuss your business needs, and answer any questions
-        that you may have. Enter your details at the contact section of our
+        that you may have.<br className="mb-2"></br>Enter your details at the contact section of our
         website and we&apos;ll get back to you as soon as we can!
       </p>
       <hr></hr>
