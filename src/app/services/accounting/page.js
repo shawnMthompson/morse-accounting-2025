@@ -1,6 +1,8 @@
 import NavBar from "@/components/Navbar";
 import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
+import Footer from "@/components/Footer.js";
+import GetInTouch from "@/components/GetInTouch.js";
 
 import photo from "../../../../public/DeannaT.webp";
 
@@ -54,6 +56,8 @@ export default function AccountingPage() {
           />
         </div>
       </main>
+      <GetInTouch />
+      <Footer />
     </div>
   );
 }
