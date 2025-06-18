@@ -2,7 +2,7 @@
 
 ## Notice
 
-The business was shut down in May of 2025, and as a result, the website is no longer going to be hosted. This repository remains available to showcase both the development work of the website and its technical implementation.
+The business was shut down in May of 2025, and as a result, the website is no longer going to be hosted for public use. This repository remains available to showcase both the development work of the website and its technical implementation.
 
 ## Installation
 
@@ -16,7 +16,7 @@ The business was shut down in May of 2025, and as a result, the website is no lo
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/morse-accounting-2025.git
+git clone https://github.com/shawnMthompson/morse-accounting-2025.git
 cd morse-accounting-2025
 ```
 

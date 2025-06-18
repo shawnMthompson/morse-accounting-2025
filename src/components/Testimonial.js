@@ -15,28 +15,33 @@ import {
 
 const testimonials = [
   {
-    name: "1",
-    review: "Highly recommend for all your tax needs.",
+    name: "...",
+    review:
+      "Working with Deanna has completely changed the way I approach tax season. She’s knowledgeable, efficient, and truly takes the time to explain everything in a way that makes sense. I wouldn’t trust anyone else with my finances!",
     img: "/person-one.jpg",
   },
   {
-    name: "2",
-    review: "Highly recommend for all your tax needs.",
+    name: "...",
+    review:
+      "Deanna is more than just a tax accountant — she's a partner in my business success. Her attention to detail and proactive advice helped me identify deductions I never knew I qualified for. She’s the real deal.",
     img: "/person-two.jpg",
   },
   {
-    name: "3",
-    review: "Highly recommend for all your tax needs.",
+    name: "...",
+    review:
+      "As someone who absolutely dreads taxes, I can’t express just how grateful I am to have found Deanna. She’s approachable, responsive, and takes the stress out of every step. It’s clear she genuinely cares about her clients.",
     img: "/person-three.jpg",
   },
   {
-    name: "4",
-    review: "Highly recommend for all your tax needs.",
+    name: "...",
+    review:
+      "Deanna's expertise saved me thousands and helped streamline my bookkeeping for the entire year. She’s incredibly professional and down-to-earth — I recommend her to anyone looking for reliable and personalized tax support.",
     img: "/person-three.jpg",
   },
   {
-    name: "5",
-    review: "Highly recommend for all your tax needs.",
+    name: "...",
+    review:
+      "I’ve been getting my taxes done with Deanna for nearly three years now, and I can honestly say she’s the best accountant I’ve ever worked with. She’s smart, trustworthy, and always ahead of the curve when it comes to new tax laws. I couldn’t ask for better service.",
     img: "/person-three.jpg",
   },
 ];
