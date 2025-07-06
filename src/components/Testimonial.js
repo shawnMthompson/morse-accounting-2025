@@ -1,11 +1,5 @@
 "use client";
 
-/**
- * For the most part, this component is complete aside from filling in the actual testimonials.
- * It still needs to be made responsive for mobile devices. Currently, the buttons are essentially unusable on mobile devices.
- * So, I'll need to find a good workaround before saying this component is fully implemented.
- */
-
 import { useState } from "react";
 import Image from "next/image";
 import {
@@ -68,38 +62,81 @@ export default function Testimonial() {
 
   const [leftIdx, centerIdx, rightIdx] = getIndices();
   return (
-    <div className="w-full max-w-5xl m-auto">
-      <div className="mt-20">
-        <div className="flex justify-center items-center gap-6">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mt-10 md:mt-20">
+        {/* Mobile: Single card view */}
+        <div className="md:hidden">
+          <div className="flex flex-col items-center">
+            <div className="bg-gray-700 w-full max-w-sm h-[400px] text-white rounded-xl">
+              <div className="h-48 rounded-t-xl bg-gray-500 flex justify-center items-center">
+                <Image
+                  src={testimonials[current].img}
+                  width={120}
+                  height={120}
+                  alt={testimonials[current].name}
+                  className="h-32 w-32 rounded-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col justify-center items-center gap-2 p-4 flex-1">
+                <p className="text-lg font-semibold">
+                  {testimonials[current].name}
+                </p>
+                <p className="text-center text-md">
+                  {testimonials[current].review}
+                </p>
+              </div>
+            </div>
+            {/* Mobile navigation buttons */}
+            <div className="flex space-x-6 justify-center mt-6">
+              <button
+                onClick={prevTestimonial}
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 hover:bg-gray-600 text-white transition"
+                aria-label="Previous testimonial"
+              >
+                <FaRegArrowAltCircleLeft className="text-xl" />
+              </button>
+              <button
+                onClick={nextTestimonial}
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 hover:bg-gray-600 text-white transition"
+                aria-label="Next testimonial"
+              >
+                <FaRegArrowAltCircleRight className="text-xl" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: Three card carousel */}
+        <div className="hidden md:flex justify-center items-center gap-6">
           <button
             onClick={prevTestimonial}
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-400 hover:bg-gray-500 text-white transition"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 hover:bg-gray-600 text-white transition"
             aria-label="Previous testimonials"
           >
             <FaRegArrowAltCircleLeft className="text-2xl" />
           </button>
-          <div className="relative flex justify-center items-center w-full h-[480px]">
+          <div className="relative flex justify-center items-center w-full h-[480px] overflow-visible">
             {[leftIdx, centerIdx, rightIdx].map((idx, pos) => {
-              // pos: 0 = left, 1 = center, 2 = right
               const isCenter = pos === 1;
               const baseClasses =
                 "absolute transition-all duration-500 flex flex-col items-center";
               const cardClasses = isCenter
-                ? "z-20 scale-110 shadow-2xl left-1/2 -translate-x-1/2"
+                ? "z-20 scale-110 left-1/2 -translate-x-1/2"
                 : pos === 0
-                ? "z-10 scale-90 left-1/4 -translate-x-1/2"
-                : "z-10 scale-90 left-3/4 -translate-x-1/2";
+                ? "z-10 scale-90 left-1/4 -translate-x-1/2 pointer-events-none"
+                : "z-10 scale-90 left-3/4 -translate-x-1/2 pointer-events-none";
+              const cardBg = isCenter ? "bg-gray-700" : "bg-gray-700/60";
+              const cardHeight = isCenter ? "h-[420px]" : "h-[340px]";
+
               return (
                 <div
                   key={idx}
-                  className={`${baseClasses} ${cardClasses} bg-gray-700 h-[420px] w-80 text-white rounded-xl shadow-lg`}
+                  className={`${baseClasses} ${cardClasses} ${cardHeight} w-80 ${cardBg} text-white rounded-xl`}
                   style={{
-                    top: isCenter ? "0" : "30px",
+                    top: isCenter ? "0" : "60px",
                   }}
                 >
-                  <div
-                    className={`h-56 rounded-t-xl bg-gray-400 flex justify-center items-center w-full`}
-                  >
+                  <div className="h-56 rounded-t-xl bg-gray-500 flex justify-center items-center w-full">
                     <Image
                       src={testimonials[idx].img}
                       width={isCenter ? 180 : 120}
@@ -122,19 +159,23 @@ export default function Testimonial() {
           </div>
           <button
             onClick={nextTestimonial}
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-400 hover:bg-gray-500 text-white transition"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 hover:bg-gray-600 text-white transition"
             aria-label="Next testimonials"
           >
             <FaRegArrowAltCircleRight className="text-2xl" />
           </button>
         </div>
+
+        {/* Dots indicator */}
         <div className="flex justify-center mt-6 gap-2">
           {testimonials.map((_, idx) => (
-            <span
+            <button
               key={idx}
-              className={`h-2 w-2 rounded-full ${
-                idx === current ? "bg-indigo-500" : "bg-gray-300"
+              onClick={() => setCurrent(idx)}
+              className={`h-2 w-2 rounded-full transition-colors ${
+                idx === current ? "bg-white" : "bg-gray-500"
               }`}
+              aria-label={`Go to testimonial ${idx + 1}`}
             />
           ))}
         </div>
