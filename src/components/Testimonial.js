@@ -67,8 +67,8 @@ export default function Testimonial() {
         {/* Mobile: Single card view */}
         <div className="md:hidden">
           <div className="flex flex-col items-center">
-            <div className="bg-gray-700 w-full max-w-sm h-[400px] text-white rounded-xl">
-              <div className="h-48 rounded-t-xl bg-gray-500 flex justify-center items-center">
+            <div className="bg-secondary w-full max-w-sm h-[400px] text-surface rounded-xl">
+              <div className="h-48 rounded-t-xl bg-accent flex justify-center items-center">
                 <Image
                   src={testimonials[current].img}
                   width={120}
@@ -90,14 +90,14 @@ export default function Testimonial() {
             <div className="flex space-x-6 justify-center mt-6">
               <button
                 onClick={prevTestimonial}
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 hover:bg-gray-600 text-white transition"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-primary hover:bg-secondary text-surface transition"
                 aria-label="Previous testimonial"
               >
                 <FaRegArrowAltCircleLeft className="text-xl" />
               </button>
               <button
                 onClick={nextTestimonial}
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 hover:bg-gray-600 text-white transition"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-primary hover:bg-secondary text-surface transition"
                 aria-label="Next testimonial"
               >
                 <FaRegArrowAltCircleRight className="text-xl" />
@@ -110,7 +110,7 @@ export default function Testimonial() {
         <div className="hidden md:flex justify-center items-center gap-6">
           <button
             onClick={prevTestimonial}
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 hover:bg-gray-600 text-white transition"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-primary hover:bg-secondary text-surface transition"
             aria-label="Previous testimonials"
           >
             <FaRegArrowAltCircleLeft className="text-2xl" />
@@ -125,18 +125,18 @@ export default function Testimonial() {
                 : pos === 0
                 ? "z-10 scale-90 left-1/4 -translate-x-1/2 pointer-events-none"
                 : "z-10 scale-90 left-3/4 -translate-x-1/2 pointer-events-none";
-              const cardBg = isCenter ? "bg-gray-700" : "bg-gray-700/60";
+              const cardBg = isCenter ? "bg-secondary" : "bg-secondary/60";
               const cardHeight = isCenter ? "h-[420px]" : "h-[340px]";
 
               return (
                 <div
                   key={idx}
-                  className={`${baseClasses} ${cardClasses} ${cardHeight} w-80 ${cardBg} text-white rounded-xl`}
+                  className={`${baseClasses} ${cardClasses} ${cardHeight} w-80 ${cardBg} text-surface rounded-xl`}
                   style={{
                     top: isCenter ? "0" : "60px",
                   }}
                 >
-                  <div className="h-56 rounded-t-xl bg-gray-500 flex justify-center items-center w-full">
+                  <div className="h-56 rounded-t-xl bg-accent flex justify-center items-center w-full">
                     <Image
                       src={testimonials[idx].img}
                       width={isCenter ? 180 : 120}
@@ -159,7 +159,7 @@ export default function Testimonial() {
           </div>
           <button
             onClick={nextTestimonial}
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 hover:bg-gray-600 text-white transition"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-primary hover:bg-secondary text-surface transition"
             aria-label="Next testimonials"
           >
             <FaRegArrowAltCircleRight className="text-2xl" />
@@ -173,7 +173,7 @@ export default function Testimonial() {
               key={idx}
               onClick={() => setCurrent(idx)}
               className={`h-2 w-2 rounded-full transition-colors ${
-                idx === current ? "bg-white" : "bg-gray-500"
+                idx === current ? "bg-accent" : "bg-neutral"
               }`}
               aria-label={`Go to testimonial ${idx + 1}`}
             />

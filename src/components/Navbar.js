@@ -35,12 +35,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="bg-primary border-neutral/20">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Business Logo and Name */}
         <Link href="/" className="flex items-center space-x-3">
           <Image src={logo} alt="MAITS Logo" />
-          <span className="self-center lg:text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center lg:text-2xl font-semibold whitespace-nowrap text-neutral">
             Morse Accounting and Income Tax
           </span>
         </Link>
@@ -48,12 +48,12 @@ export default function Navbar() {
         <button
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-neutral hover:bg-hoverText focus:ring-accent transition-colors duration-200"
           aria-controls="navbar-default"
           aria-expanded={isOpen}
         >
           <span className="sr-only">Open main menu</span>
-          <GiHamburgerMenu size={24} color="silver" />
+          <GiHamburgerMenu size={24} color="#FEF5EF" />
         </button>
         {/* Navbar Menu */}
         <div
@@ -62,11 +62,11 @@ export default function Navbar() {
           } w-full md:block md:w-auto z-50`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-hoverText/20 rounded-lg bg-neutral md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-primary">
             <li>
               <Link
                 href="/"
-                className="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                className="block py-2 px-3 text-primary rounded-sm hover:bg-hoverText md:hover:bg-transparent md:text-neutral md:p-0 md:hover:text-hoverText transition-colors duration-200"
                 aria-current="page"
               >
                 Home
@@ -77,7 +77,7 @@ export default function Navbar() {
               <button
                 onClick={toggleDropdown}
                 id="dropdownNavbarLink"
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                className="flex items-center justify-between w-full py-2 px-3 text-primary hover:bg-hoverText md:hover:bg-transparent md:border-0 md:hover:text-hoverText md:p-0 md:w-auto md:text-neutral transition-colors duration-200"
               >
                 Services <RxCaretDown size={24} className="ml-1" />
               </button>
@@ -86,17 +86,17 @@ export default function Navbar() {
                 id="dropdownNavbar"
                 className={`${
                   isDropdownOpen ? "block" : "hidden"
-                } absolute z-10 font-normal bg-white text-left divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600`}
+                } absolute z-10 font-normal bg-neutral text-left divide-y divide-hoverText/20 rounded-lg shadow-lg w-44 border border-hoverText/20`}
                 style={{ left: "50%", transform: "translateX(-50%)" }}
               >
                 <ul
-                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  className="py-2 text-sm text-primary"
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
                     <Link
                       href="/services/accounting"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-hoverText hover:text-primary transition-colors duration-200"
                     >
                       Accounting
                     </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/services/bookkeeping"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-hoverText hover:text-primary transition-colors duration-200"
                     >
                       Bookkeeping
                     </Link>
@@ -112,7 +112,7 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/services/electronic-filing"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-hoverText hover:text-primary transition-colors duration-200"
                     >
                       Electronic Filing
                     </Link>
@@ -120,7 +120,7 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/services/notary-public-financials"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-hoverText hover:text-primary transition-colors duration-200"
                     >
                       Notary Public
                     </Link>
@@ -128,7 +128,7 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/services/tax-planning"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-hoverText hover:text-primary transition-colors duration-200"
                     >
                       Tax Planning
                     </Link>
@@ -136,7 +136,7 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/services/tax-preparation"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-hoverText hover:text-primary transition-colors duration-200"
                     >
                       Tax Preparation
                     </Link>
@@ -147,7 +147,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/contact"
-                className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-primary rounded-sm hover:bg-hoverText md:hover:bg-transparent md:border-0 md:hover:text-hoverText md:p-0 md:text-neutral transition-colors duration-200"
               >
                 Contact
               </Link>
